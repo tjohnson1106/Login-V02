@@ -1,11 +1,12 @@
-import React from "react";
+import React, { Component } from "react";
 import {
   View,
-  Text,
   ImageBackground,
   StyleSheet,
   Image
 } from "react-native";
+
+import LoginForm from "./LoginForm";
 
 class Login extends Component {
   state = {};
@@ -15,9 +16,14 @@ class Login extends Component {
         source={require("../../assets/login_one.jpeg")}
         style={styles.container}
       >
-        <View>
-          <Image source={require("../../assets/login_logo.jpeg")} />
+        <View style={styles.logoContainer}>
+          <Image
+            source={require("../../assets/logo_login_one.jpeg")}
+            style={styles.logo}
+          />
         </View>
+
+        <LoginForm />
       </ImageBackground>
     );
   }
@@ -38,7 +44,8 @@ const styles = StyleSheet.create({
   },
   logo: {
     width: 140,
-    height: 140
+    height: 140,
+    borderRadius: 70
   }
 });
 
