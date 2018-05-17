@@ -3,8 +3,11 @@ import {
   View,
   ImageBackground,
   StyleSheet,
-  Image
+  Image,
+  Text
 } from "react-native";
+
+import { LinearGradient } from "expo";
 
 import LoginForm from "./LoginForm";
 
@@ -12,8 +15,10 @@ class Login extends Component {
   state = {};
   render() {
     return (
-      <ImageBackground
-        source={require("../../assets/login_one.jpeg")}
+      <LinearGradient
+        colors={["#decba4", "#3e5151", "#6080B2"]}
+        start={[0.4, 0.8]}
+        end={[0.1, 0.4]}
         style={styles.container}
       >
         <View style={styles.logoContainer}>
@@ -24,7 +29,7 @@ class Login extends Component {
         </View>
 
         <LoginForm />
-      </ImageBackground>
+      </LinearGradient>
     );
   }
 }
@@ -43,10 +48,21 @@ const styles = StyleSheet.create({
     justifyContent: "center"
   },
   logo: {
-    width: 140,
-    height: 140,
-    borderRadius: 70
+    width: 180,
+    height: 180,
+    borderRadius: 90,
+    borderWidth: 0.5,
+    borderColor: "#000112"
   }
 });
 
 export default Login;
+
+{
+  /* <ImageBackground
+source={require("../../assets/login_one.jpeg")}
+style={styles.container}
+> */
+}
+
+// </ImageBackground>

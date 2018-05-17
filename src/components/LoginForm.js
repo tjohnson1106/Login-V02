@@ -28,7 +28,7 @@ class LoginForm extends Component {
         />
 
         <TouchableOpacity style={styles.registerButton}>
-          <Text>Sign Up With Facebook</Text>
+          <Text>Sign In With Facebook</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.forgetButton}>
           <Text>Forgot Password?</Text>
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
     padding: 12,
     marginBottom: 10,
     backgroundColor: "rgba( 255, 255, 255, 0.2 )",
-    borderColor: "#fff",
+    borderColor: "#000112",
     borderWidth: 0.6,
     borderRadius: 20
   },
@@ -60,20 +60,22 @@ const styles = StyleSheet.create({
     marginTop: 10
   },
   registerButton: {
-    backgroundColor: "#bdc3c7",
+    backgroundColor: "#D13B6B",
     alignSelf: "stretch",
     alignItems: "center",
     padding: 14,
     marginTop: 10,
-    borderRadius: 20
+    borderRadius: 20,
+    borderColor: "#000112"
   },
   forgetButton: {
-    backgroundColor: "#e74c3c",
+    backgroundColor: "#CAF0D8",
     alignSelf: "stretch",
     alignItems: "center",
     padding: 14,
     marginTop: 10,
-    borderRadius: 20
+    borderRadius: 20,
+    borderColor: "#000112"
   }
 });
 
